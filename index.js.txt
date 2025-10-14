@@ -1,0 +1,19 @@
+// Importowanie biblioteki Express
+const express = require('express');
+
+// Inicjalizacja aplikacji Express
+const app = express();
+
+// Definiujemy port, na którym serwer będzie nasłuchiwał
+const PORT = 3000;
+
+// Definiujemy nasz pierwszy, testowy "endpoint"
+// Kiedy wejdziemy na adres http://localhost:3000/api/test, serwer odpowie wiadomością
+app.get('/api/test', (req, res) => {
+  res.json({ message: 'Serwer domelHR działa poprawnie!' });
+});
+
+// Uruchomienie serwera i nasłuchiwanie na zdefiniowanym porcie
+app.listen(PORT, () => {
+  console.log(`Serwer domelHR uruchomiony na porcie ${PORT}`);
+});
